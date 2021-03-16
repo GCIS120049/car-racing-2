@@ -73,6 +73,9 @@ class Game {
           cars[index - 1].shapeColor = "red";
           camera.position.x = displayWidth/2;
           camera.position.y = cars[index-1].y;
+          strokeWeight(10);
+          fill("red");
+          ellipse(x,y,80,80);
         }
        
         //textSize(15);
@@ -86,8 +89,11 @@ class Game {
       player.update();
     }
 
-    if(player.distance > 3860){
+    if(player.distance > 3600){
       gameState = 2;
+      //for(var i = 0;){
+        //allPlayers[i].distance();
+      //}
     }
    
     drawSprites();
